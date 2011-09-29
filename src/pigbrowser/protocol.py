@@ -1,33 +1,21 @@
 #!/usr/bin/env python2.7
 #-*- coding:utf-8 -*-
-'''
-Created on 19.5.2011
 
-@author: hc
+# (c) 2011 Christian Holmberg
+# This file is part of Pig browser.
 
-protocol.py implements a protocol class that can be used to fetch serverlist from masterserver,
-or serverinfo from servers.
-usage:
-	wsw = protocol.WarsowProtocol()
-	query = protocol.ServerQuery( socket, ip, wsw )
-	query.startMasterQuery ( FULLEMPTY=True, gametype='duel' ) :
-	while( not query.checkMasterQuery() ) :
-		sleep( sleeptime )	# wait for response from the server
-		
-	ips = query.finishMasterQuery()
-	
-	for ip in ips :
-		query = protocol.ServerQuery( socket, ip, wsw )
-		query.startServerQuery( fullinfo=True )
-		while( not query.checkServerQuery() ) :
-			sleep( sleeptime )	# wait for response from the server
-			
-		info = query.finishServerQuery()
-		
-	!! ADDED !!
-	query.flushMasterQuery() - returns current list of ip's so it can be
-	used sorta like an iterator object.
-'''
+# Foobar is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# Foobar is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
 ###################
 #
